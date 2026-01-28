@@ -1,29 +1,28 @@
 // Password protection for case studies
+// NOTE: This is client-side only and is meant for light gating, not true security.
 (function() {
-    // Get the case study number from the URL or page
     const currentPage = window.location.pathname;
-    let caseStudyNum = null;
+
+    // Match URLs like "/case-study-2", "/case-study-2/", "/case-study-2.html"
+    const match = currentPage.match(/case-study-(\d+)(?:\.html)?\/?$/);
+    if (!match) {
+        // Not on a case study page
+        return;
+    }
+
+    const caseStudyNum = parseInt(match[1], 10);
+
+    // Case study 6 is intentionally not password-protected
+    if (caseStudyNum === 6) return;
+
+    // Determine required password
+    // 1 & 5: under construction
+    // 2,3,4: main password
     let requiredPassword = null;
-    
-    // Determine case study number and required password
-    if (currentPage.includes('case-study-1.html')) {
-        caseStudyNum = 1;
-        requiredPassword = 'etdworkinprogress';
-    } else if (currentPage.includes('case-study-2.html')) {
-        caseStudyNum = 2;
-        requiredPassword = 'etdwork';
-    } else if (currentPage.includes('case-study-3.html')) {
-        caseStudyNum = 3;
-        requiredPassword = 'etdwork';
-    } else if (currentPage.includes('case-study-4.html')) {
-        caseStudyNum = 4;
-        requiredPassword = 'etdwork';
-    } else if (currentPage.includes('case-study-5.html')) {
-        caseStudyNum = 5;
+    if (caseStudyNum === 1 || caseStudyNum === 5) {
         requiredPassword = 'etdworkinprogress';
     } else {
-        // Case study 6 or other pages - no password required
-        return;
+        requiredPassword = 'etdwork';
     }
     
     // Check if password is already stored in sessionStorage
