@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pipeline Forecasting | Elisa Dunn</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Gruesa+Libre&family=Be+Vietnam+Pro:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@1,500&family=Noto+Sans+HK:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="case-study.css">
+</head>
+<body>
+    <nav class="navigation case-study-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-link back-link-nav">
+                <span class="back-arrow">←</span> Back
+            </a>
+        </div>
+    </nav>
+
+    <main class="case-study-main">
+        <!-- Hero Container -->
+        <div class="case-hero-container">
+            <div class="case-hero-image-wrapper">
+                <img src="images/pipeline-forecast-intro.png" alt="Pipeline Forecasting">
+            </div>
+            <div class="case-hero-content">
+                <div class="case-study-meta">Lattice • 2023</div>
+                <h1 class="case-study-title">Pipeline forecasting</h1>
+                <p class="case-study-body">Designing an experience that gives sales leaders real-time visibility into team quotas and clear actions to help teams hit their numbers.</p>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="case-hero-section">
+            <div class="case-container">
+                
+                <div class="case-overview-section">
+                    <h2 class="case-section-label">Overview</h2>
+                    
+
+                    
+                    <h3 class="case-main-headline">Bridging the gap between prospecting and deal management.</h3>
+                    
+                    <p class="case-intro-text">
+                        Outreach, a platform historically focused on sales prospecting workflows, faced a significant challenge. While the company had traditionally supported sales reps with prospecting tasks (cold calling, emailing, scheduling meetings), there was a new initiative to support deal management (prioritizing, tracking, and monitoring deals in the pipeline). However, these two critical aspects of the sales process were managed in isolation, which hindered the overall efficiency of our users.
+                    </p>
+                        <div class="case-question-card">
+                            <div class="case-question-label">The primary question</div>
+                            <div class="case-question-text">How might we inform sales teams on how to modify their prospecting efforts to reach their deal management goals?</div>
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Selling a Vision Section -->
+        <section class="case-problem-section">
+            <div class="case-container">
+                <h2 class="case-section-label">Selling a vision</h2>
+                <h3 class="case-section-headline">Conceptual designs</h3>
+                
+                <p class="case-section-text">
+                    Recognizing the need for a holistic solution, I collaborated with product management and other designers to envision a new feature. This feature envisioned a "sales pipeline funnel" calculator that would use historical data and AI algorithms to project the number of deals won for a given quarter. This innovation aimed to help sales managers estimate the additional prospecting efforts required to meet their sales quotas.
+                </p>
+                
+                <p class="case-section-text">
+                    These early designs were shared with the entire Product-Design-Engineering (PDE) organization and directly with the Chief Product Officer (CPO) to gather preliminary feedback and generate excitement around the concept.
+                </p>
+            </div>
+        </section>
+
+        <!-- Image Placeholder -->
+        <section class="case-image-section">
+            <img src="images/case study 4 images/pipeline-concept-car.gif" alt="Conceptual Design Mockups" style="width: 100%; height: auto; display: block;">
+        </section>
+
+        <!-- Convincing Stakeholders Section -->
+        <section class="case-discovery-section">
+            <div class="case-container">
+                <h2 class="case-section-label">Selling a vision</h2>
+                <h3 class="case-section-headline">Convincing stakeholders to spend time on discovery work</h3>
+                
+                <p class="case-section-text">
+                    Product leadership at Outreach was enthusiastic about the project, eager to start development as soon as possible. However, little validation had been conducted to ensure the design met user expectations. Furthermore, no plans existed for integrating this feature into the existing ecosystem.
+                </p>
+                
+                <p class="case-section-text">
+                    To address these concerns, I collaborated with Product Management, Engineering, and Data Science to create a project timeline. This timeline allowed for Engineering and Data Science work to be completed a month before the annual sales conference, which was the target for beta readiness. It also incorporated time for discovery and evaluative research.
+                </p>
+            </div>
+        </section>
+
+        <!-- Image Placeholder -->
+        <section class="case-image-section">
+            <img src="images/case study 4 images/pipeline-timeline.png" alt="Project Timeline" style="width: 100%; height: auto; display: block;">
+        </section>
+
+        <!-- Cross-functional Collaboration Section -->
+        <section class="case-problem-section">
+            <div class="case-container">
+                <h2 class="case-section-label">Cross-functional collaboration</h2>
+                <h3 class="case-section-headline">Figuring out where this concept should live</h3>
+                
+                <p class="case-section-text">
+                    In collaboration with my Product Manager, I explored synergies with another product vertical known as Deal Intelligence. This team was planning to create a Deal Insights dashboard for sales managers, which appeared to be a suitable home for our new feature. However, since my team was ahead in terms of development, we faced questions about how the new dashboard would look and function and how our feature would fit. To provide the Deal Intelligence team time to catch up, I initiated the discovery research phase.
+                </p>
+            </div>
+        </section>
+
+        <!-- Discovery Research Section -->
+        <section class="case-discovery-section">
+            <div class="case-container">
+                <h2 class="case-section-label">Discovery research</h2>
+                <h3 class="case-section-headline">Main insights from talking to sales managers</h3>
+                
+                <p class="case-section-text">
+                    To gain deeper insights, I engaged with three customers and three internal sales managers. Their goal was to understand current workflows, tools, and behaviors. Four main insights emerged from this research:
+                </p>
+                
+                <div class="case-insights-grid">
+                    <div class="case-insight-item">
+                        <div class="case-insight-number">1</div>
+                        <div class="case-insight-text">The traditional inverted triangle-based funnel framework did not always accurately represent sales stages. Also, displaying the entire create-to-close funnel was distracting.</div>
+                    </div>
+                    
+                    <div class="case-insight-item">
+                        <div class="case-insight-number">2</div>
+                        <div class="case-insight-text">"Accounts contacted" is the prospecting metric that is easiest to correlate with the creation of additional sales pipeline.</div>
+                    </div>
+                    
+                    <div class="case-insight-item">
+                        <div class="case-insight-number">3</div>
+                        <div class="case-insight-text">Sales managers preferred straightforward recommendations for immediate action. Not as concerned over simulating scenarios.</div>
+                    </div>
+                    
+                    <div class="case-insight-item">
+                        <div class="case-insight-number">4</div>
+                        <div class="case-insight-text">Sales managers typically plan a quarter or two ahead, with sales pipeline in one quarter primarily built during the previous quarter.</div>
+                    </div>
+                </div>
+                
+                <h4 class="case-subsection-headline">Design requirements</h4>
+                
+                <p class="case-section-text">
+                    After defining the top takeaways from the research, I crafted the design requirements I wanted to keep in mind when designing this new experience:
+                </p>
+                
+                <ul class="case-design-requirements">
+                    <li>Move away from funnel visualization to represent sales stages more accurately.</li>
+                    <li>Shift the focus towards pipeline creation rather than the full create-to-close funnel.</li>
+                    <li>Highlight the relationship between work in one quarter and its impact on an upcoming quarter.</li>
+                    <li>De-emphasize the calculator and focus on pipeline creation recommendations and impact.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- First Iterations Section -->
+        <section class="case-problem-section">
+            <div class="case-container">
+                <h2 class="case-section-label">First iterations</h2>
+                <h3 class="case-section-headline">Large card on the dashboard</h3>
+                
+                <p class="case-section-text">
+                    The initial design iteration made some assumptions about the upcoming Deal Insights dashboard. It featured tabs for different sales quarters, with the current quarter marked as "active." Users could view up to three quarters into the future, with a countdown to the next quarter. Recommendations for increasing pipeline via prospecting were provided.
+                </p>
+            </div>
+        </section>
+
+        <!-- Image Placeholder -->
+        <section class="case-image-section">
+            <img src="images/case study 4 images/pipeline-concepts-1.gif" alt="Initial Dashboard Design" style="width: 100%; height: auto; display: block;">
+        </section>
+
+        <!-- Drill Down Section -->
+        <section class="case-discovery-section">
+            <div class="case-container">
+                <h3 class="case-section-headline">Drill down to reveal insights</h3>
+                
+                <p class="case-section-text">
+                    A drilldown option allowed users to toggle between their current trajectory and the recommended trajectory, with a visual connection showing the relationship between the number of accounts contacted and pipeline created.
+                </p>
+            </div>
+        </section>
+
+        <!-- Image Placeholder -->
+        <section class="case-image-section">
+            <img src="images/case study 4 images/pipeline-concepts-2.gif" alt="Drill Down Interaction" style="width: 100%; height: auto; display: block;">
+        </section>
+
+        <!-- Calculator Section -->
+        <section class="case-problem-section">
+            <div class="case-container">
+                <h3 class="case-section-headline">De-emphasizing the calculator functionality</h3>
+                
+                <p class="case-section-text">
+                    I transformed the calculator functionality to be a pop-up from a button, de-emphasizing it but still remaining prominent on the screen.
+                </p>
+            </div>
+        </section>
+
+        <!-- Image Placeholder -->
+        <section class="case-image-section">
+            <img src="images/case study 4 images/pipeline-concepts-3.png" alt="Calculator Pop-up Design" style="width: 100%; height: auto; display: block;">
+        </section>
+
+        <!-- Testing Prototypes Section -->
+        <section class="case-testing-section">
+            <div class="case-container">
+                <h2 class="case-section-label">Testing prototypes</h2>
+                <h3 class="case-section-headline">Approach and insights</h3>
+                
+                <p class="case-section-text">
+                    To validate the design, I partnered with User Experience Researchers (UXR) and conducted prototype testing with eight participants. The key questions addressed were:
+                </p>
+                
+                <ul class="case-section-text" style="list-style: none; padding-left: 0; margin-bottom: 40px;">
+                    <li style="margin-bottom: 15px;">• Are the interactions discoverable and usable?</li>
+                    <li style="margin-bottom: 15px;">• Are the data and data visualizations interpretable?</li>
+                    <li style="margin-bottom: 15px;">• What opportunities for improvement exist?</li>
+                </ul>
+                
+                <p class="case-section-text">
+                    Feedback from the testing revealed the following insights:
+                </p>
+                
+                <div class="case-findings-grid">
+                    <div class="case-finding-item">
+                        <div class="case-finding-title">Line chart not ideal</div>
+                        <div class="case-finding-description">A quarter-based line chart makes less sense when the timeline is too far into the future (i.e. if we're looking two or three quarters ahead rather than just one quarter ahead).</div>
+                    </div>
+                    
+                    <div class="case-finding-item">
+                        <div class="case-finding-title">Some information wasn't valuable</div>
+                        <div class="case-finding-description">There were a lot of metrics and numbers displayed in this experience. Some were helpful to sales managers, others were more noisy than helpful.</div>
+                    </div>
+                    
+                    <div class="case-finding-item">
+                        <div class="case-finding-title">Need to improve clickability cues</div>
+                        <div class="case-finding-description">The prospecting-to-pipeline conversion card seemed clickable even when it was not. This was due to divider lines making the component look like clickable sections.</div>
+                    </div>
+                    
+                    <div class="case-finding-item">
+                        <div class="case-finding-title">Desire to see team contributions</div>
+                        <div class="case-finding-description">Customers voiced a desire to see a breakdown of team members' contribution to the pipeline. While this was a valuable feature, in order to stick to our deadline, we decided to have this be a post-MVP exploration.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Iterating Section -->
+        <section class="case-problem-section">
+            <div class="case-container">
+                <h2 class="case-section-label">Iterating</h2>
+                <h3 class="case-section-headline">Fitting into the new Deal Insights Dashboard</h3>
+                
+                <p class="case-section-text">
+                    By this time, the Deal Intelligence team had defined the main pieces of the Deal Insights Dashboard. Since they decided that the overarching content of the page needed to be grounded in one quarter, I needed to brainstorm how to include multi-quarter viewability for our specific feature.
+                </p>
+            </div>
+        </section>
+
+        <!-- Image Placeholder -->
+        <section class="case-image-section">
+            <img src="images/case study 4 images/pipeline-final-1.png" alt="Deal Insights Dashboard Integration" style="width: 100%; height: auto; display: block;">
+        </section>
+
+        <!-- Individual Cards Section -->
+        <section class="case-discovery-section">
+            <div class="case-container">
+                <h3 class="case-section-headline">Individual cards for each future quarter</h3>
+                
+                <p class="case-section-text">
+                    I considered creating a card that allows people to select a future quarter via a dropdown menu. However, I decided to make each future quarter a card of its own. This allows for easy scanning and less clicks to see important information.
+                </p>
+                
+                <p class="case-section-text">
+                    I placed them right beneath the current active quarter, so that the information of "quarterly pipeline" is grouped together on the dashboard.
+                </p>
+            </div>
+        </section>
+
+        <!-- Image Placeholder -->
+        <section class="case-image-section">
+            <img src="images/case study 4 images/pipeline-final-2.png" alt="Quarter Cards Design" style="width: 100%; height: auto; display: block;">
+        </section>
+
+        <!-- Progress Bar Section -->
+        <section class="case-problem-section">
+            <div class="case-container">
+                <h3 class="case-section-headline">Switching from line chart to progress bar</h3>
+                
+                <p class="case-section-text">
+                    Utilized a progress bar so that progress towards a goal is clear without having to deal with strange time-based x-axes. Made the legend items vertical so that the numbers are easy to scan.
+                </p>
+            </div>
+        </section>
+
+        <!-- Image Placeholder -->
+        <section class="case-image-section">
+            <img src="images/case study 4 images/pipeline-breakdown.png" alt="Progress Bar Visualization" style="width: 100%; height: auto; display: block;">
+        </section>
+
+        <!-- Recommended Prospecting Section -->
+        <section class="case-discovery-section">
+            <div class="case-container">
+                <h3 class="case-section-headline">Recommended prospecting efforts</h3>
+                
+                <p class="case-section-text">
+                    Each card has a static banner at the bottom that displays a high-level insight. To dig deeper, clicking the info tooltip exposes a popup that explains what prospecting efforts a team needs to close their pipeline gap.
+                </p>
+                
+                <p class="case-section-text">
+                    For sales managers that want to simulate different prospecting needs, they can access the calculator via the "View metrics" button.
+                </p>
+            </div>
+        </section>
+
+        <!-- Image Placeholder -->
+        <section class="case-image-section">
+            <img src="images/case study 4 images/pipeline-final-3.png" alt="Recommendation Banner Design" style="width: 100%; height: auto; display: block;">
+        </section>
+
+        <!-- Insight Banner States Section -->
+        <section class="case-problem-section">
+            <div class="case-container">
+                <h3 class="case-section-headline">Designing different states for the insight banner</h3>
+                
+                <p class="case-section-text">
+                    I defined three main types of insights: recommendation on how to improve, acknowledgment of being on track, and acknowledgement of exceeding your goal.
+                </p>
+                
+                <p class="case-section-text">
+                    The "recommendation" purposely uses a "light bulb" icon and a filled background to draw the eye to that area. Conversely, the latter two insight banners do not have a filled background. This is so that color is used deliberately for important information that needs action.
+                </p>
+            </div>
+        </section>
+
+        <!-- Image Placeholder -->
+        <section class="case-image-section">
+            <img src="images/case study 4 images/pipeline-final-4.gif" alt="Insight Banner States" style="width: 100%; height: auto; display: block;">
+        </section>
+
+        <!-- AI Signaling Section -->
+        <section class="case-problem-section">
+            <div class="case-container">
+                <h3 class="case-section-headline">Visually signaling the existence of AI</h3>
+                
+                <p class="case-section-text">
+                    To denote that these projections are AI-based, the projected pipeline legend item is adorned with a "magic" icon.
+                </p>
+            </div>
+        </section>
+
+        <!-- Image Placeholder -->
+        <section class="case-image-section">
+            <img src="images/case study 4 images/pipeline-final-5.png" alt="AI Icon Design" style="width: 100%; height: auto; display: block;">
+        </section>
+
+        <!-- Wrapping Up Section -->
+        <section class="case-final-section">
+            <div class="case-container">
+                <h2 class="case-section-label">Wrapping up</h2>
+                <h3 class="case-section-headline">What's next</h3>
+                
+                <p class="case-section-text">
+                    The project's timeline was extended due to organizational changes. Thus, Data Science and Engineering were set to complete their work a month after the initial deadline. After releasing to private beta, our next step is to implement the functionality of allowing managers to see their team member's contributions to the sales pipeline. We'll also be monitoring overall usage and potentially usability issues we'll need to address.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="elisabeth-dunn-resume-2026.pdf" class="footer-link">Resume</a>
+                <a href="https://linkedin.com/in/elisadunn" target="_blank" class="footer-link">LinkedIn</a>
+                <a href="mailto:elisa.tdunn@gmail.com" class="footer-link">elisa.tdunn@gmail.com</a>
+            </div>
+            <p class="footer-copyright">&copy; 2024 Elisa Dunn. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="password-protection.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

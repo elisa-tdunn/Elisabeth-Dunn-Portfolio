@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMS Migration | Elisa Dunn</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Gruesa+Libre&family=Be+Vietnam+Pro:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@1,500&family=Noto+Sans+HK:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="case-study.css">
+</head>
+<body>
+    <nav class="navigation case-study-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-link back-link-nav">
+                <span class="back-arrow">←</span> Back
+            </a>
+        </div>
+    </nav>
+
+    <main class="case-study-main">
+        <!-- Hero Container -->
+        <div class="case-hero-container">
+            <div class="case-hero-image-wrapper">
+                <div class="case-image-placeholder" style="width: 420px; height: 324px; border: 2px dashed #ddd; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #999; font-size: 16px;">
+                    <span>Hero Image</span>
+                </div>
+            </div>
+            <div class="case-hero-content">
+                <div class="case-study-meta">Outreach • 2022</div>
+                <h1 class="case-study-title">SMS migration</h1>
+                <p class="case-study-body">Updating features to match new visual direction while fixing usability issues in the flagship version.</p>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="case-hero-section">
+            <div class="case-container">
+                <div class="case-overview-section">
+                    <h2 class="case-section-label">Overview</h2>
+                    
+                    <h3 class="case-main-headline">Need to update features to match new visual direction</h3>
+                    
+                    <p class="case-intro-text">
+                        Outreach's Design Systems team completed a complete visual rehaul of the product's components in order to move into a more modern look. Designers were tasked with updating their surfaces with the new "restyled" components. My work spanned multiple surfaces, one of which was the SMS feature. Since we were already in the mindset of "update and improve", this project was focused both on 1:1 migration and fixing any usability issues that lingered in the flagship version.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Auditing Section -->
+        <section class="case-problem-section">
+            <div class="case-container">
+                <h2 class="case-section-label">Auditing the platform</h2>
+                <h3 class="case-section-headline">Three surfaces to migrate</h3>
+                
+                <div class="case-insights-grid">
+                    <div class="case-insight-item">
+                        <div class="case-insight-number">1</div>
+                        <div class="case-insight-text"><strong>The main SMS page:</strong> This is where users can see all of their previous text exchanges and create new text exchanges.</div>
+                    </div>
+                    
+                    <div class="case-insight-item">
+                        <div class="case-insight-number">2</div>
+                        <div class="case-insight-text"><strong>A one-off SMS experience:</strong> This is for users who want to send a quick message while they are elsewhere in the product.</div>
+                    </div>
+                    
+                    <div class="case-insight-item">
+                        <div class="case-insight-number">3</div>
+                        <div class="case-insight-text"><strong>SMS tasks:</strong> An experience where users can create and schedule a task to send an SMS message to their customers. Outreach's tasks can be pulled up anywhere throughout the product and outside the product via our Google Chrome extension.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Identifying Issues Section -->
+        <section class="case-discovery-section">
+            <div class="case-container">
+                <h2 class="case-section-label">Auditing the platform</h2>
+                <h3 class="case-section-headline">Identifying issues with our SMS offering</h3>
+                
+                <div class="case-findings-grid">
+                    <div class="case-finding-item">
+                        <div class="case-finding-title">Issue 1: Search bar spacing</div>
+                        <div class="case-finding-description">The search bar on the main SMS page lacked proper padding and spacing.</div>
+                    </div>
+                    
+                    <div class="case-finding-item">
+                        <div class="case-finding-title">Issue 2: Subject line requires memorization</div>
+                        <div class="case-finding-description">Subject line requires users to memorize customer's phone numbers in order to remember who the text exchange is with.</div>
+                    </div>
+                    
+                    <div class="case-finding-item">
+                        <div class="case-finding-title">Issue 3: Visual differentiation</div>
+                        <div class="case-finding-description">Now that our new design system had rounded buttons, the rounded text bubbles do not have any visual differentiation from our buttons.</div>
+                    </div>
+                    
+                    <div class="case-finding-item">
+                        <div class="case-finding-title">Issue 4: Avatar component</div>
+                        <div class="case-finding-description">The avatar component next to the sender's messages added no additional information or clarity to the user's experience. It also wasted horizontal space, particularly in SMS tasks.</div>
+                    </div>
+                    
+                    <div class="case-finding-item">
+                        <div class="case-finding-title">Issue 5: Send button copy</div>
+                        <div class="case-finding-description">The send button explicitly said "Send," taking up valuable typing space for users. This was especially problematic for SMS tasks with limited horizontal space.</div>
+                    </div>
+                    
+                    <div class="case-finding-item">
+                        <div class="case-finding-title">Issue 6: Color palette</div>
+                        <div class="case-finding-description">The flagship version of the one-off SMS dialog used improper color palettes. We needed to correct this by using an off-white background color for the dialog.</div>
+                    </div>
+                    
+                    <div class="case-finding-item">
+                        <div class="case-finding-title">Issue 7: Scrolling to typing interface</div>
+                        <div class="case-finding-description">Users had to scroll down to the bottom of the text exchange to access the typing interface while using SMS tasks. This could be disorienting for first-time users and frustrating for those wanting to quickly respond to a message they already saw on another surface.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- First Iteration Section -->
+        <section class="case-problem-section">
+            <div class="case-container">
+                <h2 class="case-section-label">First iteration</h2>
+                <h3 class="case-section-headline">Tackling how to update text bubbles</h3>
+                
+                <p class="case-section-text">
+                    The first iteration resulted in us creating text bubbles that an 8px rounded corner, so that they look more like rectangles rather than full ovals. We also made the sender's text bubble color a dark gray and the receiver's text bubble white, so that there would be no overlap from the colors used for buttons or interactive objects. To synergize with this change, I changed the texting background be a light shade of gray supported by our new design system.
+                </p>
+                
+                <p class="case-section-text">
+                    However, there was also concerns from the Design Systems team that the usage of such dark colors for a prominent, recurring component would not match the new visual style of the product.
+                </p>
+            </div>
+        </section>
+
+        <!-- Image Placeholder -->
+        <section class="case-image-section">
+            <div class="case-image-placeholder large">
+                <span>First Iteration - Text Bubbles</span>
+            </div>
+        </section>
+
+        <!-- Final Iteration Section -->
+        <section class="case-discovery-section">
+            <div class="case-container">
+                <h2 class="case-section-label">Final iteration</h2>
+                <h3 class="case-section-headline">Adjusting the designs of text bubbles</h3>
+                
+                <p class="case-section-text">
+                    Thus, we moved forward with a different version where the sender's text bubble was a shade of purple that was more complimentary to our product's new look. With our new colors for the text bubbles, we needed a white background in order to be compliant with color contrast standards. To solve for this issue in the one-off SMS dialog, I opted for a border around the texting interface.
+                </p>
+            </div>
+        </section>
+
+        <!-- Image Placeholder -->
+        <section class="case-image-section">
+            <div class="case-image-placeholder large">
+                <span>Final Iteration - Text Bubbles</span>
+            </div>
+        </section>
+
+        <!-- Subject Line Section -->
+        <section class="case-problem-section">
+            <div class="case-container">
+                <h3 class="case-section-headline">Subject line</h3>
+                
+                <p class="case-section-text">
+                    Updated the subject line so that once the first message has been sent, the subject line changes the receiver's phone number into their contact name.
+                </p>
+            </div>
+        </section>
+
+        <!-- Optimizing Section -->
+        <section class="case-discovery-section">
+            <div class="case-container">
+                <h3 class="case-section-headline">Optimizing for typing space and reading space</h3>
+                
+                <p class="case-section-text">
+                    We removed the avatar component for the sender. We also stickied the typing interface to the bottom of the screen, so that users always have access to it.
+                </p>
+            </div>
+        </section>
+
+        <!-- Send Button Section -->
+        <section class="case-problem-section">
+            <div class="case-container">
+                <h3 class="case-section-headline">Updating the Send button</h3>
+                
+                <p class="case-section-text">
+                    Replaced the "Send" copy with an icon, with the ability to see the title of the button on hover for additional context and accessibility purposes.
+                </p>
+            </div>
+        </section>
+
+        <!-- Text Bubble Resizing Section -->
+        <section class="case-discovery-section">
+            <div class="case-container">
+                <h3 class="case-section-headline">Defining how text bubbles should be resized</h3>
+                
+                <p class="case-section-text">
+                    The flagship version of the SMS platform also had the issue of line lengths spanning way past the point of optimal readability. Therefore, I defined when text bubbles should wrap across the 3 different widths we supported.
+                </p>
+                
+                <ul class="case-section-text" style="list-style: none; padding-left: 0; margin-bottom: 40px;">
+                    <li style="margin-bottom: 15px;">• For surfaces with narrower widths (640px and narrower), the max line length was 45 characters</li>
+                    <li style="margin-bottom: 15px;">• For surfaces with wider widths (641px and higher), text bubbles wrapped after 75 characters.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Results Section -->
+        <section class="case-final-section">
+            <div class="case-container">
+                <h2 class="case-section-label">Results</h2>
+                <h3 class="case-section-headline">What's next?</h3>
+                
+                <p class="case-section-text">
+                    The updates to SMS were shipped to our customers in March 2023. Through some of our customer feedback channels, we've heard about customer appreciating the new SMS experience especially in the Tasks surface, due to giving them more space to both view and type messages. The design of the "Send" button has also been utilized in different parts of the product, such as our new AI Assist feature.
+                </p>
+                
+                <p class="case-section-text">
+                    Next, we'll be testing if we should incorporate a "Scroll-away" functionality for the Subject Line in Tasks, to further increase the amount of reading space for our users.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="elisabeth-dunn-resume-2026.pdf" class="footer-link">Resume</a>
+                <a href="https://linkedin.com/in/elisadunn" target="_blank" class="footer-link">LinkedIn</a>
+                <a href="mailto:elisa.tdunn@gmail.com" class="footer-link">elisa.tdunn@gmail.com</a>
+            </div>
+            <p class="footer-copyright">&copy; 2024 Elisa Dunn. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="password-protection.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

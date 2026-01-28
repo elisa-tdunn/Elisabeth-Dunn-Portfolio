@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Branching conditions | Elisa Dunn</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Averia+Gruesa+Libre&family=Be+Vietnam+Pro:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@1,500&family=Noto+Sans+HK:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="case-study.css">
+</head>
+<body>
+    <nav class="navigation case-study-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-link back-link-nav">
+                <span class="back-arrow">←</span> Back
+            </a>
+        </div>
+    </nav>
+
+    <main class="case-study-main">
+        <!-- Hero Container -->
+        <div class="case-hero-container">
+            <div class="case-hero-image-wrapper">
+                <img src="images/Branching conditions images/triggers-hero.png" alt="Branching Conditions">
+            </div>
+            <div class="case-hero-content">
+                <div class="case-study-meta">Outreach • 2023</div>
+                <h1 class="case-study-title">Branching conditions</h1>
+                <p class="case-study-body">Making automation-building more streamlined by helping admins consolidate related triggers.</p>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="case-hero-section">
+            <div class="case-container">
+                <div class="case-overview-section">
+                    <h2 class="case-section-label">Overview</h2>
+                    
+                    <h3 class="case-main-headline">Helping admins automate repetitive tasks more efficiently.</h3>
+                    
+                    <p class="case-intro-text">
+                        Within sales orgs, there are many manual processes that sales reps have to juggle. Sometimes, an important step will slip through the cracks, which can have negative downstream effects for the entire sales team. Outreach.io offers a tool, called Triggers, that allows admins to automate these repetitive tasks through building automation rules. This assures that steps will not be forgotten and also allows sales reps to focus more on the important tasks that close deals.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Image -->
+        <section class="case-image-section">
+            <img src="images/Branching conditions images/triggers-background.png" alt="Triggers Background" style="width: 100%; height: auto; display: block;">
+        </section>
+
+        <!-- Problem Space Section -->
+        <section class="case-problem-section">
+            <div class="case-container">
+                <h2 class="case-section-label">Problem space</h2>
+                <h3 class="case-section-headline">Duplicative triggers</h3>
+                
+                <p class="case-section-text">
+                    Admins have many triggers that are exact copies of each other except for one or two conditions. This results in very long lists of triggers that make it difficult for admins to track, update, or debug issues. The behavior of creating duplicative triggers is due to one-off conditions that determine segment-specific actions, such as:
+                </p>
+                
+                <ul class="case-section-text" style="list-style: none; padding-left: 0; margin-bottom: 40px;">
+                    <li style="margin-bottom: 15px;">• Tagging customer details based on a meeting's outcome</li>
+                    <li style="margin-bottom: 15px;">• Putting prospective customers into language or region-specific campaigns</li>
+                    <li style="margin-bottom: 15px;">• Assigning prospective customers to specific sales teams</li>
+                </ul>
+                
+                <img src="images/Branching conditions images/triggers-background-2.png" alt="Triggers Background 2" style="width: 100%; height: auto; display: block; margin-top: 40px; border: none; border-radius: 24px;">
+            </div>
+        </section>
+
+        <!-- Design Goals Section -->
+        <section class="case-discovery-section">
+            <div class="case-container">
+                <h2 class="case-section-label">Design goals</h2>
+                <h3 class="case-section-headline">Three main design goals</h3>
+                
+                <div class="case-insights-grid case-insights-grid-3col">
+                    <div class="case-insight-item">
+                        <div class="case-insight-number">1</div>
+                        <div class="case-insight-text"><strong>Trigger consolidation:</strong> We want to help admins consolidate related triggers, so that they only have to manage 1 trigger rather than managing 7 different triggers.</div>
+                    </div>
+                    
+                    <div class="case-insight-item">
+                        <div class="case-insight-number">2</div>
+                        <div class="case-insight-text"><strong>Make updating triggers simple:</strong> Making it easy for admins to scan information and find what they need to fix or update.</div>
+                    </div>
+                    
+                    <div class="case-insight-item">
+                        <div class="case-insight-number">3</div>
+                        <div class="case-insight-text"><strong>Addition without confusion:</strong> We want the trigger-building experience to be easier manage, without conflicting with our users' current mental model of how to build triggers.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Discovery Section -->
+        <section class="case-problem-section">
+            <div class="case-container">
+                <h2 class="case-section-label">Discovery</h2>
+                <h3 class="case-section-headline">Defining what trigger consolidation entails</h3>
+                
+                <p class="case-section-text">
+                    Today, our trigger builder requires you to define the overarching conditions needed for automated actions to activate. Our approach for consolidating triggers was to introduce the concept of branching conditions: allowing you to define additional conditions needed for certain actions to activate.
+                </p>
+            </div>
+        </section>
+
+        <!-- Image -->
+        <section class="case-image-section" style="margin-bottom: 28px;">
+            <img src="images/Branching conditions images/triggers-background-3.png" alt="Triggers Background 3" style="width: 100%; height: auto; display: block;">
+        </section>
+
+        <!-- Discovering Mental Models Section -->
+        <section class="case-problem-section">
+            <div class="case-container">
+                <h4 class="case-subsection-headline">Discovering admins' mental models when building automations</h4>
+                
+                <p class="case-section-text">
+                    We did a discovery round of research with 6 of our current customers, learning about how triggers are built at their organizations today. We also walked our customers through a cognitive mapping exercise.
+                </p>
+                
+                <img src="images/Branching conditions images/triggers-background-4.png" alt="Triggers Background 4" style="width: 100%; height: auto; display: block; margin: 40px 0; border: 1px solid #E1E1E3; border-radius: 24px;">
+                
+                <div class="case-question-card">
+                    <div class="case-question-label">Biggest takeaway</div>
+                    <div class="case-question-text">Most users expect to define conditions first, and then define the actions that result from the conditions being met.</div>
+                    <p class="case-question-text" style="font-size: 16px; margin-top: 16px;">Doing it in reverse (defining actions and then defining conditions) took longer for users to work through.</p>
+                </div>
+                
+                <p class="case-section-text">
+                    However, with how our trigger builder was currently built, users would have to define the branching action first before defining the branching condition. Moving forward, we needed to understand which path would be less disruptive to users:
+                </p>
+                
+                <ul class="case-section-text" style="list-style: none; padding-left: 0; margin-bottom: 40px;">
+                    <li style="margin-bottom: 15px;">• Drastically changing the way triggers are built in order to match expectations</li>
+                    <li style="margin-bottom: 15px;">• Or, adding new functionality to a familiar-but-counterintuitive way of trigger-building</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Exploring Options Section -->
+        <section class="case-discovery-section">
+            <div class="case-container">
+                <h2 class="case-section-label">Exploring options</h2>
+                <h3 class="case-section-headline">First version</h3>
+                
+                <p class="case-section-text">
+                    This exploration attempted to keep today's UI as intact as possible, which resulted in allowing users to attach conditions after they create an action.
+                </p>
+            </div>
+        </section>
+
+        <!-- Image -->
+        <section class="case-image-section">
+            <img src="images/Branching conditions images/triggers-original-1.gif" alt="First Version Exploration" style="width: 100%; height: auto; display: block;">
+        </section>
+
+        <!-- Second Version Section -->
+        <section class="case-problem-section">
+            <div class="case-container">
+                <h3 class="case-section-headline">Second version</h3>
+                
+                <p class="case-section-text">
+                    This exploration took into account users' trigger-building mental models by creating a clear input-output visual between Conditions and Actions. I also communicated the concept of branching via indentation and connection lines.
+                </p>
+            </div>
+        </section>
+
+        <!-- Image -->
+        <section class="case-image-section">
+            <img src="images/Branching conditions images/triggers-original-2.gif" alt="Second Version Exploration" style="width: 100%; height: auto; display: block;">
+        </section>
+
+        <!-- Merging Conditions Section -->
+        <section class="case-discovery-section">
+            <div class="case-container">
+                <h3 class="case-section-headline">Merging all condition types underneath one list</h3>
+                
+                <p class="case-section-text">
+                    Another issue surfaced during the first iteration: conditions were split into multiple sections by type, forcing users to scan 2–3 separate menus to find the right option. This was both time-consuming and vertically heavy—problems that would only compound when supporting multiple condition sets.
+                </p>
+                
+                <p class="case-section-text">
+                    To streamline trigger creation, we explored unifying all condition types into a single list. <strong>We ultimately moved forward with a context-menu approach, which minimizes clicks and allows users to view more options at once.</strong>
+                </p>
+                
+                <div class="before-after-slider" style="margin-top: 40px; position: relative; width: 100%; border-radius: 24px; overflow: hidden; border: 1px solid #E1E1E3;">
+                    <div class="before-after-container" style="position: relative; width: 100%;">
+                        <div class="before-image-wrapper" style="position: relative; width: 100%; overflow: hidden;">
+                            <img src="images/Branching conditions images/triggers-original-5.png" alt="Before" class="before-image" style="display: block; width: 100%; height: auto;">
+                        </div>
+                        <div class="after-image-wrapper" style="position: absolute; top: 0; left: 0; width: 50%; overflow: hidden;">
+                            <img src="images/Branching conditions images/triggers-original-3.png" alt="After" class="after-image" style="position: absolute; top: 0; left: 0; width: 100%; height: auto;">
+                        </div>
+                        <div class="slider-handle" style="position: absolute; top: 0; bottom: 0; left: 50%; width: 4px; background: #1a1a1a; cursor: ew-resize; transform: translateX(-50%); z-index: 10;">
+                            <div class="slider-handle-circle" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 40px; height: 40px; background: #1a1a1a; border-radius: 50%; border: 3px solid #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.3);"></div>
+                        </div>
+                        <div class="before-label" style="position: absolute; bottom: 20px; left: 20px; padding: 8px 16px; background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); border-radius: 8px; font-family: 'Be Vietnam Pro', sans-serif; font-size: 14px; font-weight: 600; color: #1a1a1a; z-index: 5; opacity: 1; transition: opacity 0.3s ease;">Before</div>
+                        <div class="after-label" style="position: absolute; bottom: 20px; right: 20px; padding: 8px 16px; background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); border-radius: 8px; font-family: 'Be Vietnam Pro', sans-serif; font-size: 14px; font-weight: 600; color: #1a1a1a; z-index: 5; opacity: 1; transition: opacity 0.3s ease;">After</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testing Section -->
+        <section class="case-testing-section">
+            <div class="case-container">
+                <h2 class="case-section-label">Testing</h2>
+                <h3 class="case-section-headline">Main insights from prototype testing</h3>
+                
+                <p class="case-section-text">
+                    We conducted comparative usability testing with the same 6 customers and 2 additional customers. I was fully expecting users to find Version 1 easier to build. However…
+                </p>
+                
+                <div class="case-findings-grid case-findings-grid-3col">
+                    <div class="case-finding-item">
+                        <div class="case-finding-title">6 out of 8 participants struggled with Version 1</div>
+                        <div class="case-finding-description">"But I already set [overarching] conditions up above…why are there more 'add condition' buttons here?" — Customer #2</div>
+                    </div>
+                    
+                    <div class="case-finding-item">
+                        <div class="case-finding-title">2 out of 8 participants struggled with Version 2</div>
+                        <div class="case-finding-description">Users appreciated seeing the direct relationship between conditions and actions. They also comprehended the concept of "branching actions" easier.</div>
+                    </div>
+                    
+                    <div class="case-finding-item">
+                        <div class="case-finding-title">The new conditions menu caused little friction</div>
+                        <div class="case-finding-description">In fact, most did not notice the change. When brought to their attention, the change was unanimously viewed as an improvement.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Implementing Feedback Section -->
+        <section class="case-problem-section">
+            <div class="case-container">
+                <h2 class="case-section-label">Implementing feedback</h2>
+                <h3 class="case-section-headline">Refining the designs</h3>
+                
+                <p class="case-section-text">
+                    Nonetheless, Version 2, while more successful and preferred, was not perfect. We still wanted to address why some were struggling with this version and take into account the feedback we got from customers. For this reason, we wanted to:
+                </p>
+                
+                <div class="case-insights-grid" style="margin-top: 40px;">
+                    <div class="case-insight-item">
+                        <h4 class="case-subsection-headline" style="margin-top: 0; margin-bottom: 15px;">Cut down on repetitive copy</h4>
+                        <p class="case-section-text" style="margin-bottom: 0;">
+                            In order to reduce cognitive load, I focused on removing the long explanations of conditions and actions in each section and replaced them with simple If/Then labeling.
+                        </p>
+                    </div>
+                    
+                    <div class="case-insight-item">
+                        <h4 class="case-subsection-headline" style="margin-top: 0; margin-bottom: 15px;">Reduce unnecessary padding</h4>
+                        <p class="case-section-text" style="margin-bottom: 0;">
+                            These triggers can get quite lengthy and require a lot of scrolling. In order to make the experience tighter, I reduced the padding and tweaked the spacing between elements.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Image -->
+        <section class="case-image-section" style="margin-bottom: 40px;">
+            <img src="images/Branching conditions images/triggers-final-1.png" alt="Refined Design - Reduced Padding" style="width: 100%; height: auto; display: block;">
+        </section>
+
+        <!-- Duplication Feature Section -->
+        <section class="case-discovery-section">
+            <div class="case-container">
+                <h4 class="case-subsection-headline">Allow for duplication of branching actions</h4>
+                
+                <p class="case-section-text">
+                    We learned that some customers can have upwards of 20 branching actions with this new framework. In order to make building so many branches easier, we added the ability to duplicate. This reduces the number of clicks from 12 to 6 per branching action.
+                </p>
+            </div>
+        </section>
+
+        <!-- Image -->
+        <section class="case-image-section" style="margin-bottom: 40px;">
+            <img src="images/Branching conditions images/triggers-final-2.png" alt="Duplication Feature" style="width: 100%; height: auto; display: block;">
+        </section>
+
+        <!-- Collapsible Sections Section -->
+        <section class="case-problem-section">
+            <div class="case-container">
+                <h4 class="case-subsection-headline">Collapsible sections</h4>
+                
+                <p class="case-section-text">
+                    For similar reasons of allowing for duplication and wanting to reduce padding, we also introduced collapsing sections for easier scanning. Collapsing translates the inputted conditions and actions into readable sentences, so that admins can quickly find a section they need to update.
+                </p>
+            </div>
+        </section>
+
+        <!-- Image -->
+        <section class="case-image-section">
+            <img src="images/Branching conditions images/triggers-final-3.gif" alt="Collapsible Sections" style="width: 100%; height: auto; display: block;">
+        </section>
+
+        <!-- Final Design Section -->
+        <section class="case-final-section">
+            <div class="case-container">
+                <h2 class="case-section-label">Final design</h2>
+                <h3 class="case-section-headline">Streamlined trigger-building experience</h3>
+                
+                <p class="case-section-text">
+                    The final design successfully addresses the problem of duplicative triggers by allowing admins to consolidate related triggers into a single, manageable trigger with branching conditions. The clear visual relationship between conditions and actions, combined with streamlined interactions, makes it easier for admins to build and maintain their automation rules.
+                </p>
+            </div>
+        </section>
+
+        <!-- Final Image -->
+        <section class="case-image-section">
+            <img src="images/Branching conditions images/triggers-final-4.png" alt="Final Design / Product Showcase" style="width: 100%; height: auto; display: block;">
+        </section>
+
+        <!-- Results Section -->
+        <section class="case-problem-section">
+            <div class="case-container">
+                <h2 class="case-section-label">Results</h2>
+                <h3 class="case-section-headline">What's next?</h3>
+                
+                <p class="case-section-text">
+                    We have recently shipped a beta version of this feature. We'll be using this to gather further feedback on how to improve the experience before making it generally available. Since it is common for admins to create new triggers at the start/end of a fiscal quarter, we will be tracking the overall usage and adoption of branching actions for newly built triggers.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="elisabeth-dunn-resume-2026.pdf" class="footer-link">Resume</a>
+                <a href="https://linkedin.com/in/elisadunn" target="_blank" class="footer-link">LinkedIn</a>
+                <a href="mailto:elisa.tdunn@gmail.com" class="footer-link">elisa.tdunn@gmail.com</a>
+            </div>
+            <p class="footer-copyright">&copy; 2024 Elisa Dunn. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="password-protection.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,855 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    color: #1a1a1a;
+    background: radial-gradient(54.62% 177.46% at 52.4% 54.62%, #FFF3E7 0%, #FFF1F7 50%, #FFFDFB 100%);
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        repeating-linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.03) 0px,
+            transparent 1px,
+            transparent 2px,
+            rgba(0, 0, 0, 0.03) 3px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.03) 0px,
+            transparent 1px,
+            transparent 2px,
+            rgba(0, 0, 0, 0.03) 3px
+        );
+    background-size: 4px 4px;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0.4;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Navigation */
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 24px 40px;
+    background-color: rgba(255, 253, 251, 0.6);
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    gap: 40px;
+}
+
+.nav-link {
+    font-family: 'Be Vietnam Pro', -apple-system, sans-serif;
+    color: #1a1a1a;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: opacity 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    opacity: 0.6;
+}
+
+/* Welcome Section */
+.welcome-section {
+    padding: 102px 0 30px;
+}
+
+.welcome-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.welcome-image-wrapper {
+    flex-shrink: 0;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.welcome-image {
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+    transform: rotate(0deg);
+    transition: transform 220ms ease;
+}
+
+.welcome-image-wrapper:hover .welcome-image {
+    transform: rotate(-6deg);
+}
+
+.hows-it-goin-image {
+    position: absolute;
+    left: -130px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: auto;
+    width: auto;
+    max-width: 160px;
+    max-height: 160px;
+    object-fit: contain;
+    z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.welcome-image-wrapper:hover .hows-it-goin-image {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+@keyframes blob {
+    0%, 100% {
+        border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
+        transform: translate(0px, 0px) scale(1) rotate(3deg);
+    }
+    25% {
+        border-radius: 37% 63% 46% 54% / 48% 55% 45% 52%;
+        transform: translate(3px, -3px) scale(1.02) rotate(3deg);
+    }
+    50% {
+        border-radius: 54% 46% 63% 37% / 52% 45% 55% 48%;
+        transform: translate(0px, 5px) scale(0.98) rotate(3deg);
+    }
+    75% {
+        border-radius: 46% 54% 37% 63% / 45% 52% 48% 55%;
+        transform: translate(-3px, -2px) scale(1.01) rotate(3deg);
+    }
+}
+
+.welcome-text {
+    text-align: center;
+}
+
+.welcome-title {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 3.5rem;
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+    color: #1a1a1a;
+}
+
+.welcome-subtitle {
+    font-family: 'Be Vietnam Pro', -apple-system, sans-serif;
+    font-size: 1.5rem;
+    color: #55556A;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.welcome-description {
+    font-family: 'Be Vietnam Pro', -apple-system, sans-serif;
+    font-size: 1.1rem;
+    color: #55556A;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    line-height: 1.8;
+}
+
+.welcome-role {
+    font-family: 'Be Vietnam Pro', -apple-system, sans-serif;
+    font-size: 1rem;
+    color: #666;
+    margin-top: 8px;
+}
+
+.welcome-role strong {
+    color: #1a1a1a;
+    font-weight: 500;
+}
+
+.lattice-link {
+    color: #1a1a1a;
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+}
+
+.lattice-link:hover {
+    opacity: 0.7;
+}
+
+/* Case Studies Section */
+.case-studies-section {
+    padding: 20px 0 120px;
+}
+
+.section-intro {
+    font-family: 'Be Vietnam Pro', -apple-system, sans-serif;
+    font-size: 16px;
+    color: #55556A;
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.case-studies-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    position: relative;
+    justify-items: center;
+}
+
+.case-study-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    position: relative;
+    width: 100%;
+    max-width: 675px;
+    max-height: 702px;
+    min-height: 482px;
+    background: #FFFFFF;
+    backdrop-filter: blur(10px) saturate(150%);
+    -webkit-backdrop-filter: blur(10px) saturate(150%);
+    border: 1px solid #E1E1E3;
+    border-radius: 32px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.case-study-card:hover {
+    transform: translateY(-8px) rotate(0deg) !important;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.card-image {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 743px;
+    height: 352px;
+    border: none;
+    border-radius: 24px;
+    background: #E9FFF5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    margin-bottom: 4px;
+    padding-bottom: 0;
+}
+
+.card-image img {
+    width: 96.25%;
+    height: 96.25%;
+    display: block;
+    object-fit: contain;
+    border-radius: 16px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* Card #2 image: always bottom-aligned with zero bottom spacing across viewports */
+.card-2 .card-image {
+    align-items: flex-end;
+    padding-bottom: 0;
+    padding-top: 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-2 .card-image img {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    /* Default "-12px bottom margin" feel: push image down so bottom is cropped */
+    transform: translate(-50%, 12px);
+    width: 96.25%;
+    height: auto;
+    max-height: calc(100% - 16px);
+    margin: 0;
+    padding: 0;
+    transition: transform 220ms ease;
+}
+
+/* Card #2 hover: raise image up slightly (relative to default), no tilt */
+.card-2:hover .card-image img {
+    transform: translate(-50%, 2px);
+}
+
+/* Card #1 image: center-aligned, 80% size, same background as card #2 */
+.card-1 .card-image {
+    align-items: center;
+    justify-content: center;
+    background: #E9FFF5;
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+.card-1-image {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+    border-radius: 16px;
+    filter: drop-shadow(0 4px 8px rgba(17, 24, 39, 0.10));
+    transition: transform 220ms ease;
+}
+
+/* Card #1 hover: grow image 5% */
+.card-1:hover .card-1-image {
+    transform: scale(1.05);
+}
+
+/* Card #3 image: overlay two images, center-aligned */
+.card-3 .card-image {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    background: #EEF0FF;
+}
+
+.card-3-base-image {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: auto;
+    max-width: 95%;
+    max-height: 95%;
+    object-fit: contain;
+    z-index: 1;
+    transition: transform 220ms ease;
+}
+
+.card-3-overlay-image {
+    position: absolute;
+    left: 60%;
+    top: 62%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: auto;
+    max-width: 70%;
+    max-height: 70%;
+    object-fit: contain;
+    z-index: 2;
+    transition: transform 220ms ease;
+}
+
+/* Card #3 hover: rotate images in opposite directions */
+.card-3:hover .card-3-base-image {
+    transform: translate(-50%, -50%) rotate(-2deg);
+}
+
+.card-3:hover .card-3-overlay-image {
+    transform: translate(-50%, -50%) rotate(2deg);
+}
+
+/* Card #4 image: left-aligned, cropped to 85% from left, with specific background */
+.card-4 .card-image {
+    align-items: flex-start;
+    justify-content: flex-start;
+    background: #EEF0FF;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    padding-top: 32px;
+    padding-right: 16px;
+}
+
+.card-4 .card-image img {
+    position: absolute;
+    left: 0;
+    top: 33px;
+    width: calc(93.5% - 17px);
+    /* Extend 2px past the bottom so it gets clipped (cropped) by overflow:hidden */
+    height: calc(100% - 31px);
+    object-fit: cover;
+    object-position: right top;
+    display: block;
+    margin: 0;
+    padding: 0;
+    border-radius: 0 16px 0 16px;
+    box-shadow: 0 10px 24px rgba(17, 24, 39, 0.10);
+    transition: transform 220ms ease, box-shadow 220ms ease;
+    transform-origin: left bottom;
+    /* Default "negative bottom margin" effect: push image down so bottom is cropped */
+    transform: translateY(12px);
+}
+
+/* Card #4 hover: tilt image slightly left */
+.card-4:hover .card-image img {
+    transform: translateY(8px) rotate(-1deg);
+    box-shadow: 0 14px 32px rgba(17, 24, 39, 0.12);
+}
+
+/* Card #5 image: overlay two images, center-aligned, same background as cards 1 and 3 */
+.card-5 .card-image {
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #EEF0FF;
+}
+
+.card-5-desktop-image {
+    position: absolute;
+    left: 45%;
+    bottom: 0;
+    transform: translate(-50%, 12px);
+    width: auto;
+    height: auto;
+    max-width: 73.5%;
+    max-height: 89.25%;
+    object-fit: contain;
+    z-index: 1;
+    filter: drop-shadow(0 4px 8px rgba(17, 24, 39, 0.10));
+    transition: transform 220ms ease;
+}
+
+.card-5-mobile-image {
+    position: absolute;
+    left: 75%;
+    bottom: 0;
+    transform: translate(-50%, 16px);
+    width: auto;
+    height: auto;
+    max-width: 44.1%;
+    max-height: 85%;
+    object-fit: contain;
+    z-index: 2;
+    filter: drop-shadow(0 4px 8px rgba(17, 24, 39, 0.10));
+    transition: transform 220ms ease;
+}
+
+/* Card #5 hover: move both images to 4px bottom margin with rotations */
+.card-5:hover .card-5-desktop-image {
+    transform: translate(-50%, 4px) rotate(-1deg);
+}
+
+.card-5:hover .card-5-mobile-image {
+    transform: translate(-50%, 4px) rotate(1deg);
+}
+
+/* Card #6 image: overlay two images, center and bottom aligned */
+.card-6 .card-image {
+    position: relative;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+    background: #FFF5E6;
+}
+
+.card-6-home-image {
+    position: absolute;
+    left: 37.5%;
+    bottom: 0;
+    transform: translate(-50%, 24px);
+    width: auto;
+    height: auto;
+    max-width: 55%;
+    max-height: 99%;
+    object-fit: contain;
+    z-index: 2;
+    transition: transform 220ms ease;
+}
+
+.card-6-insights-image {
+    position: absolute;
+    left: 64.5%;
+    bottom: 0;
+    transform: translate(-50%, 48px) rotate(3deg);
+    width: auto;
+    height: auto;
+    max-width: 55%;
+    max-height: 99%;
+    object-fit: contain;
+    z-index: 1;
+    transition: transform 220ms ease;
+}
+
+/* Card #6 hover: move both images up by 12px, rotate weekly-insights to 0deg */
+.card-6:hover .card-6-home-image {
+    transform: translate(-50%, 16px);
+}
+
+.card-6:hover .card-6-insights-image {
+    transform: translate(-50%, 36px) rotate(0deg);
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: #f5f5f5;
+    border: 1px solid #ddddf9;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 14px;
+}
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 8px;
+    width: 100%;
+    max-width: 743px;
+    border-radius: 16px;
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.card-title-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 12px;
+    width: 100%;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.card-title-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    width: 100%;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+
+.card-logo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+}
+
+.card-logo-img {
+    height: 20px;
+    width: auto;
+    object-fit: contain;
+}
+
+.lattice-logo-img {
+    height: 16px;
+    
+}
+
+.outreach-logo-img {
+    height: 16px;
+}
+
+.card-year {
+    font-size: 14px;
+    color: #666;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+.card-title {
+    flex-shrink: 0;
+    max-width: none;
+    font-family: 'Be Vietnam Pro', -apple-system, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 19px;
+    color: #000000;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.lock-icon,
+.construction-icon {
+    font-size: 18px;
+    color: #666;
+    vertical-align: middle;
+}
+
+.construction-icon {
+    position: relative;
+    cursor: help;
+}
+
+.construction-icon:hover::after {
+    content: "Under construction!";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    margin-bottom: 5px;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    z-index: 1000;
+}
+
+.construction-icon:hover::before {
+    content: "";
+    position: absolute;
+    bottom: 95%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid transparent;
+    border-top-color: #333;
+    z-index: 1000;
+}
+
+.card-description {
+    width: 100%;
+    max-width: 650px;
+    font-family: 'Be Vietnam Pro', -apple-system, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16x;
+    line-height: 1.6;
+    color: #55556A;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+/* Card rotation transforms removed - cards are now straight by default */
+
+/* About Section */
+.about-section {
+    padding: 120px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.section-title {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 3rem;
+    font-weight: 500;
+    font-style: italic;
+    margin-bottom: 60px;
+    letter-spacing: -0.02em;
+    color: #1a1a1a;
+}
+
+.about-content {
+    display: flex;
+    gap: 80px;
+    align-items: flex-start;
+}
+
+.about-text {
+    flex: 1.5;
+}
+
+.about-text p {
+    font-family: 'Be Vietnam Pro', -apple-system, sans-serif;
+    font-size: 1.1rem;
+    color: #55556A;
+    line-height: 1.8;
+    margin-bottom: 24px;
+}
+
+.about-image {
+    flex: 1;
+    display: block;
+    min-height: 400px;
+}
+
+.about-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+.image-placeholder.about-img {
+    display: block;
+    overflow: hidden;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+}
+
+.image-placeholder.about-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+    display: block;
+}
+
+/* Footer */
+.footer {
+    padding: 60px 0 40px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin-top: 80px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.footer-link {
+    font-family: 'Be Vietnam Pro', -apple-system, sans-serif;
+    color: #55556A;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #1a1a1a;
+}
+
+.footer-copyright {
+    font-family: 'Be Vietnam Pro', -apple-system, sans-serif;
+    color: #666;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .welcome-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .welcome-text {
+        text-align: center;
+    }
+
+    .welcome-description {
+        margin: 0 auto 30px;
+    }
+
+    .case-studies-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+    }
+
+    .case-study-card {
+        max-width: 675px;
+        max-height: 702px;
+        min-height: auto;
+    }
+
+    .card-image {
+        height: 312px;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-img {
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .welcome-title {
+        font-size: 3rem;
+    }
+
+    .welcome-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .case-studies-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .case-study-card {
+        max-width: 100%;
+    }
+
+    .card-title {
+        font-size: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .nav-container {
+        gap: 20px;
+    }
+}
