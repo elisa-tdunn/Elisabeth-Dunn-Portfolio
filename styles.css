@@ -504,7 +504,7 @@ body::before {
 
 .card-6-insights-image {
     position: absolute;
-    left: 64.5%;
+    left: 61%;
     bottom: 0;
     transform: translate(-50%, 48px) rotate(3deg);
     width: auto;
