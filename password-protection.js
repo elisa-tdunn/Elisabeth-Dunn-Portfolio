@@ -3,26 +3,49 @@
 (function() {
     const currentPage = window.location.pathname;
 
-    // Match URLs like "/case-study-2", "/case-study-2/", "/case-study-2.html"
-    const match = currentPage.match(/case-study-(\d+)(?:\.html)?\/?$/);
-    if (!match) {
-        // Not on a case study page
-        return;
-    }
-
-    const caseStudyNum = parseInt(match[1], 10);
-
-    // Case study 6 is intentionally not password-protected
-    if (caseStudyNum === 6) return;
-
-    // Determine required password
-    // 1 & 5: under construction
-    // 2,3,4: main password
+    // Map URLs to case study numbers and passwords
+    let caseStudyNum = null;
     let requiredPassword = null;
-    if (caseStudyNum === 1 || caseStudyNum === 5) {
+    
+    // Check for new URL format first
+    if (currentPage.match(/comp-bands(?:\.html)?\/?$/)) {
+        caseStudyNum = 1;
         requiredPassword = 'etdworkinprogress';
-    } else {
+    } else if (currentPage.match(/comp-statements(?:\.html)?\/?$/)) {
+        caseStudyNum = 2;
         requiredPassword = 'etdwork';
+    } else if (currentPage.match(/pipeline-forecasts(?:\.html)?\/?$/)) {
+        caseStudyNum = 3;
+        requiredPassword = 'etdwork';
+    } else if (currentPage.match(/branching-conditions(?:\.html)?\/?$/)) {
+        caseStudyNum = 4;
+        requiredPassword = 'etdwork';
+    } else if (currentPage.match(/sms-migration(?:\.html)?\/?$/)) {
+        caseStudyNum = 5;
+        requiredPassword = 'etdworkinprogress';
+    } else if (currentPage.match(/coco(?:\.html)?\/?$/)) {
+        // Case study 6 (coco) is intentionally not password-protected
+        return;
+    } else {
+        // Fall back to old URL format: "/case-study-2", "/case-study-2/", "/case-study-2.html"
+        const match = currentPage.match(/case-study-(\d+)(?:\.html)?\/?$/);
+        if (!match) {
+            // Not on a case study page
+            return;
+        }
+        caseStudyNum = parseInt(match[1], 10);
+        
+        // Case study 6 is intentionally not password-protected
+        if (caseStudyNum === 6) return;
+        
+        // Determine required password
+        // 1 & 5: under construction
+        // 2,3,4: main password
+        if (caseStudyNum === 1 || caseStudyNum === 5) {
+            requiredPassword = 'etdworkinprogress';
+        } else {
+            requiredPassword = 'etdwork';
+        }
     }
     
     // Check if password is already stored in sessionStorage

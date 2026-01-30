@@ -700,13 +700,16 @@ body::before {
 }
 
 .about-content {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
     gap: 80px;
-    align-items: flex-start;
+    align-items: center;
 }
 
 .about-text {
-    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .about-text p {
@@ -718,8 +721,9 @@ body::before {
 }
 
 .about-image {
-    flex: 1;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     min-height: 400px;
 }
 
