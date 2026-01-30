@@ -22,6 +22,106 @@ document.addEventListener('DOMContentLoaded', function() {
     // Add any additional interactive features here
     console.log('Portfolio loaded');
     
+    // Animate welcome section on page load
+    function animateWelcomeSection() {
+        const welcomeTitle = document.querySelector('.welcome-title');
+        const welcomeDescription = document.querySelector('.welcome-description');
+        const welcomeImageWrapper = document.querySelector('.welcome-image-wrapper');
+        
+        if (!welcomeTitle || !welcomeDescription || !welcomeImageWrapper) return;
+        
+        // Store original text
+        const titleText = welcomeTitle.textContent;
+        
+        // Split title into words and wrap each word
+        const titleWords = titleText.split(' ');
+        welcomeTitle.innerHTML = titleWords.map(word => `<span class="word">${word}</span>`).join(' ');
+        
+        // For description, preserve HTML by walking text nodes
+        const descriptionHTML = welcomeDescription.innerHTML;
+        // Use regex to wrap words, but be careful with HTML tags
+        // Match words that are not inside HTML tags
+        const wrappedDescription = descriptionHTML.replace(/(?![^<]*>)(\b\w+\b)/g, '<span class="word">$1</span>');
+        welcomeDescription.innerHTML = wrappedDescription;
+        
+        // Get all word spans
+        const titleWordSpans = welcomeTitle.querySelectorAll('.word');
+        const descriptionWordSpans = welcomeDescription.querySelectorAll('.word');
+        
+        // Animate title words one by one
+        titleWordSpans.forEach((word, index) => {
+            setTimeout(() => {
+                word.classList.add('animate');
+            }, index * 100); // 100ms delay between each word
+        });
+        
+        // After title animation completes, animate description words
+        const titleAnimationTime = titleWordSpans.length * 100 + 600; // word delays + animation duration
+        
+        setTimeout(() => {
+            descriptionWordSpans.forEach((word, index) => {
+                setTimeout(() => {
+                    word.classList.add('animate');
+                }, index * 80); // 80ms delay between each word
+            });
+            
+            // After description animation completes, trigger hover state
+            const descriptionAnimationTime = descriptionWordSpans.length * 80 + 600;
+            
+            setTimeout(() => {
+                // Add auto-hover class to trigger hover state
+                welcomeImageWrapper.classList.add('auto-hover');
+                
+                // Remove auto-hover class after 1.5 seconds
+                setTimeout(() => {
+                    welcomeImageWrapper.classList.remove('auto-hover');
+                }, 1500);
+            }, descriptionAnimationTime);
+        }, titleAnimationTime);
+    }
+    
+    // Track if user clicked the back link
+    const backLinks = document.querySelectorAll('.back-link-nav');
+    backLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            sessionStorage.setItem('navigated-from-back-link', 'true');
+        });
+    });
+    
+    // Run welcome animation on page load (only on initial load/refresh, not back/forward or back link)
+    function shouldAnimateWelcome() {
+        // Check if user navigated from back link
+        if (sessionStorage.getItem('navigated-from-back-link') === 'true') {
+            sessionStorage.removeItem('navigated-from-back-link'); // Clear the flag
+            return false;
+        }
+        
+        // Check navigation type using Performance Navigation API
+        const navigation = performance.getEntriesByType('navigation')[0];
+        if (navigation) {
+            // Don't animate on back/forward navigation
+            if (navigation.type === 'back_forward') {
+                return false;
+            }
+            // Animate on initial load ('navigate') or refresh ('reload')
+            if (navigation.type === 'navigate' || navigation.type === 'reload') {
+                return true;
+            }
+        }
+        
+        // Fallback: check if page was loaded via back button using legacy API
+        if (performance.navigation && performance.navigation.type === performance.navigation.TYPE_BACK_FORWARD) {
+            return false;
+        }
+        
+        // Default to animating if we can't determine navigation type
+        return true;
+    }
+    
+    if (shouldAnimateWelcome()) {
+        animateWelcomeSection();
+    }
+    
     // Fade in content when the first section label scrolls into view (once faded in, it stays visible)
     function handleHeroScroll() {
         const firstSectionLabel = document.querySelector('.case-section-label');
