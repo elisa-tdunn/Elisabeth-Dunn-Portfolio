@@ -1,6 +1,15 @@
 // Password protection for case studies
 // NOTE: This is client-side only and is meant for light gating, not true security.
+
+// TEMPORARY: Set to false to disable password protection
+const PASSWORD_PROTECTION_ENABLED = false;
+
 (function() {
+    // Early return if password protection is disabled
+    if (!PASSWORD_PROTECTION_ENABLED) {
+        return;
+    }
+    
     const currentPage = window.location.pathname;
 
     // Map URLs to case study numbers and passwords
