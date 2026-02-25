@@ -2,7 +2,7 @@
 // NOTE: This is client-side only and is meant for light gating, not true security.
 
 // TEMPORARY: Set to false to disable password protection
-const PASSWORD_PROTECTION_ENABLED = true;
+const PASSWORD_PROTECTION_ENABLED = false;
 
 (function() {
     // Early return if password protection is disabled
@@ -18,8 +18,8 @@ const PASSWORD_PROTECTION_ENABLED = true;
     
     // Check for new URL format first
     if (currentPage.match(/comp-bands(?:\.html)?\/?$/)) {
-        caseStudyNum = 1;
-        requiredPassword = 'etdworkinprogress';
+        // No password protection for comp-bands
+        return;
     } else if (currentPage.match(/comp-statements(?:\.html)?\/?$/)) {
         caseStudyNum = 2;
         requiredPassword = 'etdwork';
@@ -30,8 +30,8 @@ const PASSWORD_PROTECTION_ENABLED = true;
         caseStudyNum = 4;
         requiredPassword = 'etdwork';
     } else if (currentPage.match(/sms-migration(?:\.html)?\/?$/)) {
-        caseStudyNum = 5;
-        requiredPassword = 'etdworkinprogress';
+        // No password protection for sms-migration
+        return;
     } else if (currentPage.match(/coco(?:\.html)?\/?$/)) {
         // Case study 6 (coco) is intentionally not password-protected
         return;
