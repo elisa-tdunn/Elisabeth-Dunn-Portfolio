@@ -2,7 +2,7 @@
 // NOTE: This is client-side only and is meant for light gating, not true security.
 
 // TEMPORARY: Set to false to disable password protection
-const PASSWORD_PROTECTION_ENABLED = false;
+const PASSWORD_PROTECTION_ENABLED = true;
 
 (function() {
     // Early return if password protection is disabled
